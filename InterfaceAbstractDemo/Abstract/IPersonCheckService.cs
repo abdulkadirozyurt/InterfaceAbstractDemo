@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace InterfaceAbstractDemo.Abstract
 {
-    public abstract class BaseCustomerManager : ICustomerService
+    public interface IPersonCheckService
     {
-        public virtual void Save(Customer customer)
-        {
-            Console.WriteLine("Saved to db: " + customer.FirstName);
-        }
+        bool CheckIfRealPerson(Customer customer);
+
     }
 }
